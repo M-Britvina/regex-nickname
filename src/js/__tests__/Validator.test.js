@@ -1,4 +1,4 @@
-import validateUsername from "../Validator";
+import Validator from "../Validator";
 
 test.each([
     [ "T", true ],
@@ -20,7 +20,7 @@ test.each([
 ])(
     ('testing validateUsername()'),
     (name, expected) => {
-        const result = validateUsername(name);
+        const result = new Validator().validateUsername(name);
 
         expect(result).toEqual(expected);
     }
